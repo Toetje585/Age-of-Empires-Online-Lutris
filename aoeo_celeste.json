@@ -1,0 +1,106 @@
+{
+   "count":1,
+   "next":null,
+   "previous":null,
+   "results":[
+      {
+         "id":105430,
+         "game_id":105430,
+         "game_slug":"age-of-empires-online",
+         "name":"Age of Empires Online",
+         "year":2011,
+         "user":"Toetje583",
+         "runner":"wine",
+         "slug":"age-of-empires-online",
+         "version":"CD",
+         "description":"Age of Empires Online installer thanks to Project Celeste for bringing back this great game!",
+         "notes":"The Celeste Launcher is not working due bad combatibility .NET Framework 4.7/8 in order to get this game working you need a full patched version of the game",
+         "created_at":"2020-05-23T08:17:15.012000Z",
+         "updated_at":"2020-05-24T06:15:51.698645Z",
+         "draft":false,
+         "published":true,
+         "published_by":20548,
+         "rating":"",
+         "steamid":105430,
+         "gogid":null,
+         "gogslug":"",
+         "humbleid":"",
+         "humblestoreid":"",
+         "humblestoreid_real":"",
+         "script":{
+            "game":{
+               "exe":"drive_c/Program Files/Age of Empires Online/Spartan.exe",
+               "prefix":"$GAMEDIR"
+            },
+            "installer":[
+               {
+                  "task": {
+                      "arch": "win32",
+                      "description": "Creating Wine prefix",
+                      "name": "create_prefix",
+                      "prefix": "$GAMEDIR"
+                    }
+                  },
+               {
+                  "task":{
+                     "arch": "win32",
+                     "app":"win7",
+                     "description":"Setting up wine to windows 7",
+                     "name":"winetricks",
+                     "prefix":"$GAMEDIR"
+                  }
+               },
+               {
+                  "task":{
+                     "app": "dotnet35sp1",
+                     "arch": "win32",
+                     "description": "Installing .NET Framework. (3.5)",
+                     "name": "winetricks",
+                     "prefix": "$GAMEDIR"
+                  }
+               },
+               {
+                  "task": {
+                     "app": "dotnet20sp1",
+                     "arch": "win32",
+                     "description": "Installing .NET Framework. (2.0)",
+                     "name": "winetricks",
+                     "prefix": "$GAMEDIR"
+                  }
+               },
+               {
+                  "task":{
+                     "arch": "win32",
+                     "app":"corefonts mfc42 l3codecx msxml4 vcrun6 vcrun2005 vcrun2008 d3dcompiler_43 d3dx9",
+                     "description":"Installing required libraries",
+                     "name":"winetricks",
+                     "prefix":"$GAMEDIR"
+                  }
+               },
+            ],
+            "system": {
+                    "disable_compositor": true,
+                    "env": {
+                        "DXVK_LOG_LEVEL": "none",
+                        "DXVK_HUD": "fps",
+                        "DXVK_STATE_CACHE_PATH": "$GAMEDIR",
+                        "PBA_DISABLE": 0,
+                        "STAGING_SHARED_MEMORY": 1,
+                        "WINE_LARGE_ADDRESS_AWARE": 1,
+                        "__GL_SHADER_DISK_CACHE": 1,
+                        "__GL_SHADER_DISK_CACHE_PATH": "$GAMEDIR",
+                        "__GL_THREADED_OPTIMIZATIONS": 1,
+                        "pulse_latency": "true"
+                    },
+                },
+            "wine":{
+                    "MouseWarpOverride": "enable",
+                    "UseGLSL": "disabled",
+                    "dxvk": true,
+                    "esync": true,
+                    "version": "lutris-5.7-10-x86_64"
+            }
+         },
+      }
+   ]
+}
