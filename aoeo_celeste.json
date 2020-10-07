@@ -13,7 +13,7 @@
          "runner":"wine",
          "slug":"age-of-empires-online",
          "version":"CD",
-         "description":"Age of Empires Online installer thanks to Project Celeste for bringing back this great game!",
+         "description":"Age of Empires Online installer, thanks to Project Celeste for bringing back this great game!",
          "notes":"The Celeste Launcher is not working due bad combatibility .NET Framework 4.7/8 in order to get this game working you need a full patched version of the game",
          "created_at":"2020-09-16T08:17:15.012000Z",
          "updated_at":"2020-09-16T06:15:51.698645Z",
