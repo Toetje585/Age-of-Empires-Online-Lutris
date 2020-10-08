@@ -9,6 +9,7 @@ Runs Age of Empires Online (Project Celeste) using DXVK (Vulkan) on Linux using 
 # Requirements:
 
 Sadly due the launcher not working in Wine due .NET Framework you will need a fully patched game from following https://www.projectceleste.com/install/.
+
 Documentation is limited for now.
 
 launch agruments:
