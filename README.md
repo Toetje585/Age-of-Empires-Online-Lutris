@@ -22,8 +22,8 @@ Afterwards copy the patched game to:
 
 Edit the launch agruments in Lutris:
 
---email ""
---password ""
+--email "example@email.com"
+--password "yourpassword"
 
 # Add for local lan co-op
 
