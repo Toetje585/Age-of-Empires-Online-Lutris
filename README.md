@@ -24,4 +24,7 @@ Edit the launch agruments in Lutris:
 
 --email ""
 --password ""
---online-ip "" (Lan co-op only, not needed in most casses)
+
+# Add for local lan co-op
+
+--online-ip "192.168.xxx.xxx" (Lan co-op only, not needed in most casses)
