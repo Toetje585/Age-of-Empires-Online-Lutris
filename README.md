@@ -1,30 +1,43 @@
-# Age-of-Empires-Online-Lutris
+# Age of Empires Online - (Project Celeste) Lutris install script.
 
-Runs Age of Empires Online on Lutris (Linux)
+>  Lutris script to install Project Celeste (Age of Empires Online)
 
-**THIS IS WORK IN PROGRESS**
+## Table of contents
+* [General info](#general-info)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Links](#links)
 
-Runs Age of Empires Online (Project Celeste) using DXVK (Vulkan) on Linux using the Lutris - Open Gaming Platform.
+## General info
+Age of Empires Online has been revived in mid-2017 under a non-commercial license under Microsoft's "Game Content Usage Rules" by an independent group of developers (Project Celeste). It can be played on a server emulator known as "Project Celeste" with all online features fully enabled, for free without any player limitations!
+The team uses Microsoft's publicly released development-kit to balance, fix bugs, and expand the content where Microsoft's team left off.
 
-# Requirements:
+This script brings the game to Linux users aswell, it makes the install easy but if you do not preffer to use Lutris the install script is able to point you what you would need in a wineprefix.
 
-Sadly due the launcher not working in Wine due .NET Framework you will need a fully patched game from following https://www.projectceleste.com/install/.
+## Setup
 
-Documentation is limited for now.
+Download the script and start the installation by using:
+```
+$ lutris -i ~/path_to_script/age-of-empires-online.yaml
+```
+## Features
+List of features ready and TODOs for future development
+* ...
+* ...
+* ...
 
-Install  the wrapper by using:
+To-do list:
+* Finalyzing the installer script
+* Updating the game trough CLI (https://github.com/ProjectCeleste/Celeste.GameScan)
+* Account creation
 
-lutris -i ~/path_to_script/aoeo_celeste.json
+## Status
+Project is: in development
 
-Afterwards copy the patched game to:
+## Links
 
-/Games/age-of-empires-online/drive_c/Program Files/Age of Empires Online
+https://www.projectceleste.com/
+https://github.com/ProjectCeleste
 
-Edit the launch agruments in Lutris:
-
---email "example@email.com"
---password "yourpassword"
-
-# Add for local lan co-op
-
---online-ip "192.168.xxx.xxx" (Lan co-op only, not needed in most casses)
+Script created by [@Toetje583] game and launcher mainainted by the amazing Project Celeste team! @https://github.com/ProjectCeleste
