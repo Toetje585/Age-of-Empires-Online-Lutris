@@ -37,7 +37,8 @@ Project is: in development
 
 ## Links
 
-https://www.projectceleste.com/
-https://github.com/ProjectCeleste
+[Celeste Website](https://www.projectceleste.com/)<br/>
+[Celeste Github](https://github.com/ProjectCeleste/)<br/>
+[Lutris](https://lutris.net/games/age-of-empires-online/)<br/>
 
-Script created by [@Toetje583] game and launcher mainainted by the amazing Project Celeste team! @https://github.com/ProjectCeleste
+Script created by [@Toetje583] game and launcher mainainted by the amazing Project Celeste team!
