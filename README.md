@@ -15,6 +15,9 @@ The team uses Microsoft's publicly released development-kit to balance, fix bugs
 
 This script brings the game to Linux users aswell, it makes the install easy but if you do not preffer to use Lutris the install script is able to point you what you would need in a wineprefix.
 
+<img width="964" alt="AOEO Example Lutris" src="https://github.com/Toetje585/Age-of-Empires-Online-Lutris/blob/master/age-of-empires-online.png">
+
+
 ## Setup
 
 Download the script and start the installation by using:
