@@ -1,6 +1,6 @@
 name: Age of Empires Online
 game_slug: age-of-empires-online
-version: Age of Empires Online - Project Celeste (Vulkan)
+version: Age of Empires Online - Project Celeste (Vulkan) (Mediafire Slow Download)
 slug: age-of-empires-online-installer
 runner: wine
 
@@ -13,7 +13,7 @@ script:
     arch: win32
   
   files:
-  - age_of_empires_online_installer: http://192.168.1.254/AOEO_Installer.zip
+  - age_of_empires_online_installer: http://www.mediafire.com/file/afo6kcizm5qhl4e/AOEO_Installer.zip
 
   installer:
   - input_menu:
@@ -38,19 +38,13 @@ script:
       name: winetricks
       prefix: $GAMEDIR    
   - task:
-      app: dotnet20sp1
-      description: "Installing .NET Framework. (2.0)"  
-      arch: win32
-      name: winetricks
-      prefix: $GAMEDIR
-  - task:
       app: dotnet35sp1
       description: "Installing .NET Framework. (3.5)"
       arch: win32
       name: winetricks
       prefix: $GAMEDIR    
   - task:
-      app: corefonts mfc42 l3codecx msxml4 vcrun6 vcrun2005 vcrun2008 d3dcompiler_43 d3dx9
+      app: corefonts mfc42 l3codecx msxml4 vcrun6 vcrun2005 vcrun2008 d3dcompiler_43 d3dx9 directplay
       description: "Installing all game requirements"
       arch: win32
       name: winetricks
@@ -78,4 +72,5 @@ script:
   wine:
     MouseWarpOverride: enable
     dxvk: true
-    esync: true      
+    esync: true
+    version: lutris-5.7-11-x86_64      
