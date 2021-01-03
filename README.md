@@ -4,8 +4,10 @@
 
 ## Table of contents
 * [General info](#general-info)
+* [Requirements](#Requirements)
 * [Setup](#setup)
 * [Features](#features)
+* [Issues](#issues)
 * [Status](#status)
 * [Links](#links)
 
@@ -18,6 +20,11 @@ This script brings the game to Linux users aswell, it makes the install easy but
 <img width="964" alt="AOEO Example Lutris" src="https://github.com/Toetje585/Age-of-Empires-Online-Lutris/blob/master/age-of-empires-online.png">
 
 
+## Requirements
+
+For any other not based on debian you need to enable the i386 architecture, please reffer to distro instructions on how to enable them.
+It's recommended to install winehq-stable, winehq-staging and or winehq-devel to the system according to distro guidelines.
+
 ## Setup
 
 Download the script and start the installation by using:
@@ -26,14 +33,17 @@ $ lutris -i ~/path_to_script/age-of-empires-online.yaml
 ```
 ## Features
 List of features ready and TODOs for future development
-* ...
+* Updating the game trough CLI (https://github.com/ProjectCeleste/Celeste.GameScan)
 * ...
 * ...
 
 To-do list:
 * Finalyzing the installer script
-* Updating the game trough CLI (https://github.com/ProjectCeleste/Celeste.GameScan)
 * Account creation
+
+## Issues
+
+* Co-op play only works if wine has acces to privileged ports using setcap
 
 ## Status
 Project is: in development
