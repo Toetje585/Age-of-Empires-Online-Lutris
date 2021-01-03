@@ -50,7 +50,7 @@ script:
       name: winetricks
       prefix: $GAMEDIR
   - task:
-      app: d3dcompiler_43d 3dx9
+      app: d3dcompiler_43 d3dx9
       arch: win32
       description: Installing all DXVLK requirements
       name: winetricks
