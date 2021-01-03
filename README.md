@@ -31,9 +31,26 @@ Download the script and start the installation by using:
 ```
 $ lutris -i ~/path_to_script/age-of-empires-online.yaml
 ```
+
+After install make sure to set the correct account details:
+
+<img width="964" alt="Set Account Details" src="https://github.com/Toetje585/Age-of-Empires-Online-Lutris/blob/master/setaccount.png">
+
+
+## Updating the game
+
+Install .NET Core 3.1 SDK according to [Microsoft Documentation](https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu)<br/>
+
+```
+$ git clone https://github.com/ProjectCeleste/Celeste.GameScan.git
+$ cd Celeste.GameScan && dotnet build
+$ cd bin/Debug/netcoreapp3.1
+$ ./Celeste.GameScan --verbose-mode --game-dir "~/Games/age-of-empires-online/drive_c/Program Files/Age Of Empires Online"
+```
+
 ## Features
 List of features ready and TODOs for future development
-* Updating the game trough CLI (https://github.com/ProjectCeleste/Celeste.GameScan)
+* Updating the game trough CLI (https://github.com/ProjectCeleste/Celeste.GameScan) 
 * ...
 * ...
 
@@ -43,7 +60,7 @@ To-do list:
 
 ## Issues
 
-* Co-op play only works if wine has acces to privileged ports using setcap
+* Co-op play only works if wine has access to privileged ports using setcap (Asked celeste dev's to leave the privileged ports range)
 
 ## Status
 Project is: in development
