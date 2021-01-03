@@ -44,9 +44,15 @@ script:
       name: winetricks
       prefix: $GAMEDIR    
   - task:
-      app: corefonts mfc42 l3codecx msxml4 vcrun6 vcrun2005 vcrun2008 d3dcompiler_43 d3dx9 directplay
-      description: "Installing all game requirements"
+      app: corefonts mfc42 l3codecx msxml4 vcrun6 vcrun2005 vcrun2008 directplay
       arch: win32
+      description: Installing all game requirements
+      name: winetricks
+      prefix: $GAMEDIR
+  - task:
+      app: d3dcompiler_43d 3dx9
+      arch: win32
+      description: Installing all DXVLK requirements
       name: winetricks
       prefix: $GAMEDIR
   - extract:
