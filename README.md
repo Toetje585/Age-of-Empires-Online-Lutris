@@ -22,8 +22,8 @@ This script brings the game to Linux users aswell, it makes the install easy but
 
 ## Requirements
 
-For any other not based on debian you need to enable the i386 architecture, please reffer to distro instructions on how to enable them.
-It's recommended to install winehq-stable, winehq-staging and or winehq-devel to the system according to distro guidelines.
+For any other not based distro on debian you need to enable the i386 architecture, please reffer to distro instructions on how to enable them.
+It's recommended to install winehq-stable, winehq-staging and or winehq-devel to the system according to distro guidelines. Also make sure the distro is able to make use of .NET Core 3.1 SDK.
 
 ## Setup
 
