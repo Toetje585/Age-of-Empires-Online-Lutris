@@ -28,7 +28,7 @@ It's recommended to install winehq-stable, winehq-staging and or winehq-devel to
 | Ubuntu 20.10  |  Ubuntu 20.04 |
 | ------------- | ------------- |
 | gstreamer1.0-plugins-good:i386  | gstreamer1.0-plugins-good:i386  |
-| gstreamer1.0-plugins-good:i386  | gstreamer1.0-plugins-good:i386  |
+| gstreamer1.0-plugins-good:amd64  | gstreamer1.0-plugins-good:amd64  |
 | wine-stable:amd64 | wine-stable:amd64 |
 | wine-stable:i386 | wine-stable:i386 |
 
