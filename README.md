@@ -24,7 +24,7 @@ This script brings the game to Linux users aswell, it makes the install easy but
 
 **Distro:**
 
-Tested on Ubuntu 20.04/10 however all distro's hat run [Lutris](https://lutris.net/downloads/)<br/> should be supported.
+Tested on Ubuntu 20.04/10 however all distro's hat run [Lutris](https://lutris.net/downloads/) should be supported.
 
 **GPU + Driver that supports Vulkan:**
 
