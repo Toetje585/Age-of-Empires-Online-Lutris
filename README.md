@@ -44,7 +44,7 @@ It's recommended to install winehq-stable, winehq-staging and or winehq-devel to
 | winehq-stable:amd64 | winehq-stable:amd64 |
 | winehq-stable:i386 | winehq-stable:i386 |
 
-Tip: use ```--install-recommends``` once installing wine and or Lutris. Ubuntu users can enable 32bit packages beforehand using ```sudo dpkg --add-architecture i386 && sudo apt update```. Lutris allows you to switch to staging and or devel wine builds, so installing winehq-staging/winehq-devek 32bit and amd64 could give you the latest experimental wine runtimes.
+Tip: use ```--install-recommends``` once installing wine and or Lutris. Ubuntu users can enable 32bit packages beforehand using ```sudo dpkg --add-architecture i386 && sudo apt update```. Lutris allows you to switch to staging and or devel wine builds, so installing winehq-staging/winehq-devel 32bit and amd64 packages could give you the latest experimental wine runtimes.
 
 ## Setup
 
