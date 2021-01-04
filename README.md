@@ -25,6 +25,16 @@ This script brings the game to Linux users aswell, it makes the install easy but
 For any other not based distro on debian you need to enable the i386 architecture, please reffer to distro instructions on how to enable them.
 It's recommended to install winehq-stable, winehq-staging and or winehq-devel to the system according to distro guidelines. Also make sure the distro is able to make use of .NET Core 3.1 SDK.
 
+| Ubuntu 20.10  |  Ubuntu 20.04 |
+| ------------- | ------------- |
+| gstreamer1.0-plugins-good:i386  | gstreamer1.0-plugins-good:i386  |
+| gstreamer1.0-plugins-good:i386  | gstreamer1.0-plugins-good:i386  |
+| wine-stable:amd64 | wine-stable:amd64 |
+| wine-stable:i386 | wine-stable:i386 |
+
+Tip: use ```--install-recommends``` once installing wine and or Lutris. Ubuntu users can enable 32bit packages using ```sudo dpkg --add-architecture i386 && sudo apt update```.
+
+
 ## Setup
 
 Download the script and start the installation by using:
