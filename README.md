@@ -22,8 +22,20 @@ This script brings the game to Linux users aswell, it makes the install easy but
 
 ## Requirements
 
+**Distro:**
+
+Tested on Ubuntu 20.04/10 however all distro's hat run lutris should be supported.
+
+**GPU + Driver that supports Vulkan:**
+
+For the best perfromance open the Software & Updates application window. Select TAB Additional Drivers and choose any proprietary NVIDIA/AMD driver. The higher the driver number the latest the version. Alternatively users can download the latest drivers from NVIDIA/AMD directly, please reffer to guides on how to install them.
+
+**.Net Core 3.1 SDK:**
+
 For any other not based distro on debian you need to enable the i386 architecture, please reffer to distro instructions on how to enable them.
 It's recommended to install winehq-stable, winehq-staging and or winehq-devel to the system according to distro guidelines. Also make sure the distro is able to make use of .NET Core 3.1 SDK.
+
+**Packages:**
 
 | Ubuntu 20.10  |  Ubuntu 20.04 |
 | ------------- | ------------- |
