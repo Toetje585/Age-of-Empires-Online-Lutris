@@ -66,7 +66,7 @@ Install .NET Core 3.1 SDK according to [Microsoft Documentation](https://docs.mi
 $ git clone https://github.com/ProjectCeleste/Celeste.GameScan.git
 $ cd Celeste.GameScan && dotnet build
 $ cd bin/Debug/netcoreapp3.1
-$ ./Celeste.GameScan --verbose-mode --game-dir "/home/michel/Games/age-of-empires-online/drive_c/Program Files/Age Of Empires Online/"
+$ ./Celeste.GameScan --verbose-mode --game-dir "/home/username/Games/age-of-empires-online/drive_c/Program Files/Age Of Empires Online/"
 ```
 
 ## Features
