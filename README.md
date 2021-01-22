@@ -73,6 +73,16 @@ $ ./Celeste.GameScan --verbose-mode --game-dir "/home/username/Games/age-of-empi
 ## Change the language of the game
 Use this startup parameter to change the language, args: --email "" --password "" **--ignore_rest LauncherLang="de-DE"**
 
+**Supported language values:**
+
+"de-DE"
+"en-US"
+"es-ES"
+"fr-FR"
+"it-IT"
+"zh-CHT"
+"pt-BR"
+
 ## Features
 List of features ready and TODOs for future development
 * Updating the game trough CLI (https://github.com/ProjectCeleste/Celeste.GameScan) 
