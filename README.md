@@ -6,6 +6,8 @@
 * [General info](#general-info)
 * [Requirements](#Requirements)
 * [Setup](#setup)
+* [Update](#Updating-the-game)
+* [Language](#Change-the-language-of-the-game)
 * [Features](#features)
 * [Issues](#issues)
 * [Status](#status)
@@ -68,6 +70,8 @@ $ cd Celeste.GameScan && dotnet build
 $ cd bin/Debug/netcoreapp3.1
 $ ./Celeste.GameScan --verbose-mode --game-dir "/home/username/Games/age-of-empires-online/drive_c/Program Files/Age Of Empires Online/"
 ```
+## Change the language of the game
+Use the startup parameter LauncherLang to change the language, args: --email "" --password "" **--ignore_rest LauncherLang="de-DE"**
 
 ## Features
 List of features ready and TODOs for future development
