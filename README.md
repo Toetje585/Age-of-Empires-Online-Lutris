@@ -9,6 +9,7 @@
 * [Update](#Updating-the-game)
 * [Language](#Change-the-language-of-the-game)
 * [Features](#features)
+* [Tweaks](#Tweaks)
 * [Issues](#issues)
 * [Status](#status)
 * [Links](#links)
@@ -85,13 +86,20 @@ Use this startup parameter to change the language, args: --email "" --password "
 
 ## Features
 List of features ready and TODOs for future development
+
+Done:
+
 * Updating the game trough CLI (https://github.com/ProjectCeleste/Celeste.GameScan) 
 * ...
 * ...
 
-To-do list:
+To-do:
 * Finalyzing the installer script
 * Account creation
+
+## Tweaks
+
+You can use the https://xanmod.org/ kernel to get "Fsync support" and more nice optimized kernel features for all you'r gaming needs!
 
 ## Issues
 
