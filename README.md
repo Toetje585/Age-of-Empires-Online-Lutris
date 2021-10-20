@@ -97,6 +97,7 @@ Done:
 To-do:
 * Finalyzing the installer script
 * Account creation
+* Steam Deck testing
 
 ## Tweaks
 
