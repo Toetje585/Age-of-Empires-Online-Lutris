@@ -72,9 +72,6 @@ script:
       DXVK_STATE_CACHE_PATH: $GAMEDIR
       STAGING_SHARED_MEMORY: 1
       WINE_LARGE_ADDRESS_AWARE: 1
-      __GL_SHADER_DISK_CACHE: 1
-      __GL_SHADER_DISK_CACHE_PATH: $GAMEDIR
-      #prelaunch_command: $GAMEDIR/update_game.sh
   wine:
     MouseWarpOverride: enable
     dxvk: true
