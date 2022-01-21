@@ -2,6 +2,8 @@
 
 >  Lutris script to install Project Celeste (Age of Empires Online)
 
+Please note the installer files are temporarily unavailable, will be restored asap!
+
 ## Table of contents
 * [General info](#general-info)
 * [Requirements](#requirements)
