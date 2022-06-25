@@ -13,7 +13,7 @@ script:
     arch: win32
   
   files:
-  - age_of_empires_online_installer: http://168.119.211.214/AOEO_Installer.zip
+  - age_of_empires_online_installer: http://www.mediafire.com/file/afo6kcizm5qhl4e/AOEO_Installer.zip
 
   installer:
   - input_menu:
