@@ -7,54 +7,26 @@ runner: wine
 script:
   game:
     appid: 105430
-    args: --email "" --password ""
-    exe: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/Spartan.exe"
+    exe: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/Celeste Launcher.exe"
     prefix: $GAMEDIR
     arch: win32
   
   files:
   - age_of_empires_online_installer: https://www.mediafire.com/file/afo6kcizm5qhl4e/AOEO_Installer.zip
+  - age_of_empires_celeste_launcher: https://github.com/ProjectCeleste/Celeste.Launcher/releases/latest/download/CelesteLauncher.zip
 
   installer:
-  - input_menu:
-      description: 'Choose the game''s language:'
-      id: LOCALE
-      options:
-      - de_DE: "German"
-      - en_US: "English U.S."
-      - es_ES: "Spanish"
-      - fr_FR: "French" 
-      - it_IT: "Italian"
-      preselect: en_US
   - task:
       arch: win32
       description: "Creating 32Bit Wine prefix"
       name: create_prefix
-      prefix: $GAMEDIR
+      prefix: $GAMEDIR   
   - task:
-      app: win7
-      description: "Set Windows version to 7"
+      app: dotnet48
+      description: "Installing .NET Framework. (4.8)"
       arch: win32
       name: winetricks
       prefix: $GAMEDIR    
-  - task:
-      app: dotnet35sp1
-      description: "Installing .NET Framework. (3.5)"
-      arch: win32
-      name: winetricks
-      prefix: $GAMEDIR    
-  - task:
-      app: corefonts mfc42 l3codecx msxml4 vcrun6 vcrun2005 vcrun2008 directplay
-      arch: win32
-      description: Installing all game requirements
-      name: winetricks
-      prefix: $GAMEDIR
-  - task:
-      app: d3dcompiler_43 d3dx9
-      arch: win32
-      description: Installing all DXVLK requirements
-      name: winetricks
-      prefix: $GAMEDIR
   - extract:
       file: age_of_empires_online_installer
       dst: $GAMEDIR/setupdir/            
@@ -65,15 +37,15 @@ script:
       name: wineexec
       prefix: $GAMEDIR
   system:
-    disable_compositor: true
     env:
       DXVK_LOG_LEVEL: none
       DXVK_HUD: fps
       DXVK_STATE_CACHE_PATH: $GAMEDIR
       STAGING_SHARED_MEMORY: 1
+      STAGING_WRITECOPY: 1
       WINE_LARGE_ADDRESS_AWARE: 1
   wine:
     MouseWarpOverride: enable
     dxvk: true
     esync: true
-    version: lutris-5.7-11-x86_64      
+    version: tbd     
