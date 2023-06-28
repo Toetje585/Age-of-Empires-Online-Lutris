@@ -18,7 +18,7 @@ script:
   installer:
   - task:
       arch: win64
-      description: "Creating 32Bit Wine prefix"
+      description: "Creating 64Bit Wine prefix"
       name: create_prefix
       prefix: $GAMEDIR   
   - task:
