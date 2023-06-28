@@ -9,7 +9,7 @@ script:
     appid: 105430
     exe: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/Celeste Launcher.exe"
     prefix: $GAMEDIR
-    arch: win32
+    arch: win64
   
   files:
   - age_of_empires_online_installer: https://www.mediafire.com/file/afo6kcizm5qhl4e/AOEO_Installer.zip
@@ -17,35 +17,31 @@ script:
 
   installer:
   - task:
-      arch: win32
+      arch: win64
       description: "Creating 32Bit Wine prefix"
       name: create_prefix
       prefix: $GAMEDIR   
   - task:
       app: dotnet48
       description: "Installing .NET Framework. (4.8)"
-      arch: win32
+      arch: win64
       name: winetricks
       prefix: $GAMEDIR    
   - extract:
       file: age_of_empires_online_installer
       dst: $GAMEDIR/setupdir/            
   - task:
-      arch: win32
+      arch: win64
       description: Run the Age of Empires Online Installer
       executable: $GAMEDIR/setupdir/aoeo_setup.exe
       name: wineexec
       prefix: $GAMEDIR
   system:
     env:
-      DXVK_LOG_LEVEL: none
-      DXVK_HUD: fps
-      DXVK_STATE_CACHE_PATH: $GAMEDIR
+      DXVK_CONFIG_FILE: $GAMEDIR/dxvk.conf
       STAGING_SHARED_MEMORY: 1
       STAGING_WRITECOPY: 1
       WINE_LARGE_ADDRESS_AWARE: 1
+    exclude_processes: "Celeste Launcher.exe" "Celeste Game Scanner UI.exe"
   wine:
-    MouseWarpOverride: enable
-    dxvk: true
-    esync: true
     version: tbd     
