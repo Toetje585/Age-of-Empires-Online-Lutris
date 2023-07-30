@@ -36,7 +36,7 @@ script:
       executable: $GAMEDIR/setupdir/aoeo_setup.exe
       name: wineexec
       prefix: $GAMEDIR
-    - extract:
+  - extract:
       file: age_of_empires_celeste_launcher
       dst: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/"     
   system:
