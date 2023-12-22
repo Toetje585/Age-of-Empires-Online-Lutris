@@ -32,6 +32,7 @@ script:
       app: dotnet48
       description: "Installing .NET Framework. (4.8)"
       name: winetricks
+      prefix: $GAMEDIR
   - extract:
       file: age_of_empires_online_installer
       dst: $GAMEDIR/setupdir/      
