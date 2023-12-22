@@ -1,50 +1,77 @@
-name: Age of Empires Online
+description: null
 game_slug: age-of-empires-online
-version: Age of Empires Online - Project Celeste (Vulkan)
-slug: age-of-empires-online-installer
+gogslug: ''
+humblestoreid: ''
+installer_slug: age-of-empires-online-celeste
+name: Age of Empires Online
+notes: ''
 runner: wine
-
 script:
-  game:
-    appid: 105430
-    exe: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/Celeste Launcher.exe"
-    prefix: $GAMEDIR
-    arch: win64
-  
   files:
   - age_of_empires_online_installer: https://www.mediafire.com/file/afo6kcizm5qhl4e/AOEO_Installer.zip
   - age_of_empires_celeste_launcher: https://github.com/ProjectCeleste/Celeste.Launcher/releases/latest/download/CelesteLauncher.zip
-
+  game:
+    exe: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/Celeste Launcher.exe"
+    prefix: $GAMEDIR
   installer:
+  - input_menu:
+      description: 'Choose your preferred game''s language:'
+      id: LOCALE
+      options:
+      - en_US: English U.S.
+      - fr_FR: "Fran\xE7ais"
+      - de_DE: Deutsch
+      - es_ES: "Espa\xF1ol"
+      - it_IT: Italiano
+      preselect: en_US
   - task:
-      arch: win64
-      description: "Creating 64Bit Wine prefix"
+      description: Creating Wine prefix
       name: create_prefix
-      prefix: $GAMEDIR   
+      prefix: $GAMEDIR
   - task:
       app: dotnet48
       description: "Installing .NET Framework. (4.8)"
-      arch: win64
       name: winetricks
-      prefix: $GAMEDIR    
   - extract:
       file: age_of_empires_online_installer
-      dst: $GAMEDIR/setupdir/            
+      dst: $GAMEDIR/setupdir/      
   - task:
-      arch: win64
+      args: $age_of_empires_online_installer
       description: Run the Age of Empires Online Installer
-      executable: $GAMEDIR/setupdir/aoeo_setup.exe
-      name: wineexec
+      executable: $GAMEDIR/drive_c/windows/explorer.exe
+      name: wineexec      
+  - task:
+      name: winekill
       prefix: $GAMEDIR
   - extract:
       file: age_of_empires_celeste_launcher
-      dst: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/"     
+      dst: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/"      
+  - task:
+      key: GrabFullScreen
+      name: set_regedit
+      path: HKEY_CURRENT_USER\Software\Wine\X11 Driver
+      prefix: $GAMEDIR
+      value: Y
+  - task:
+      key: background
+      name: set_regedit
+      path: HKEY_CURRENT_USER\Control Panel\Colors\
+      prefix: $GAMEDIR
+      type: REG_SZ
+      value: 40 40 40
   system:
     env:
-      DXVK_CONFIG_FILE: $GAMEDIR/dxvk.conf
+      DXVK_LOG_LEVEL: none
+      DXVK_STATE_CACHE_PATH: $GAMEDIR
       STAGING_SHARED_MEMORY: 1
-      STAGING_WRITECOPY: 1
       WINE_LARGE_ADDRESS_AWARE: 1
+      __GL_SHADER_DISK_CACHE: 1
+      __GL_SHADER_DISK_CACHE_PATH: $GAMEDIR
     exclude_processes: "Celeste Launcher.exe" "Celeste Game Scanner UI.exe"
   wine:
-    version: tbd     
+    MouseWarpOverride: enable
+    dgvoodoo2: true
+slug: age-of-empires-online-celeste
+steamid: 105430
+version: Celeste
+year: 2011
