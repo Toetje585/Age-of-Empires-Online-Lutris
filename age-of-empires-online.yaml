@@ -37,9 +37,10 @@ script:
       file: age_of_empires_online_installer
       dst: $GAMEDIR/setupdir/      
   - task:
-      args: $age_of_empires_online_installer
+      args: $GAMEDIR/setupdir/aoeo_setup.exe
       description: Run the Age of Empires Online Installer
       executable: $GAMEDIR/drive_c/windows/explorer.exe
+      include_processes: explorer.exe
       name: wineexec      
   - task:
       name: winekill
@@ -47,32 +48,19 @@ script:
   - extract:
       file: age_of_empires_celeste_launcher
       dst: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/"      
-  - task:
-      key: GrabFullScreen
-      name: set_regedit
-      path: HKEY_CURRENT_USER\Software\Wine\X11 Driver
-      prefix: $GAMEDIR
-      value: Y
-  - task:
-      key: background
-      name: set_regedit
-      path: HKEY_CURRENT_USER\Control Panel\Colors\
-      prefix: $GAMEDIR
-      type: REG_SZ
-      value: 40 40 40
   system:
     env:
+      DXVK_HUD: devinfo,fps
       DXVK_LOG_LEVEL: none
       DXVK_STATE_CACHE_PATH: $GAMEDIR
       STAGING_SHARED_MEMORY: 1
       WINE_LARGE_ADDRESS_AWARE: 1
       __GL_SHADER_DISK_CACHE: 1
       __GL_SHADER_DISK_CACHE_PATH: $GAMEDIR
-    exclude_processes: "Celeste Launcher.exe" "Celeste Game Scanner UI.exe"
+    exclude_processes: "Celeste Launcher.exe Celeste Game Scanner UI.exe"
   wine:
     MouseWarpOverride: enable
-    dgvoodoo2: true
 slug: age-of-empires-online-celeste
 steamid: 105430
-version: Celeste
+version: Age of Empires Online - Project Celeste
 year: 2011
