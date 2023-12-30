@@ -39,13 +39,6 @@ Arch: For Nvidia users, install `nvidia` or `nvidia-lts` and their lib32 counter
 
 Tip: If on Debian or derivative, use ```--install-recommends``` once installing wine and or Lutris. Ubuntu users can enable 32bit packages beforehand using ```sudo dpkg --add-architecture i386 && sudo apt update```. Lutris allows you to switch to staging and or devel wine builds, so installing winehq-staging/winehq-devel 32bit and amd64 packages could give you the latest experimental wine runtimes.
 
-| Ubuntu/Debian  | Arch |
-| ------------- | ------------- | ---- |
-| gstreamer1.0-plugins-good:i386  | lib32-gst-plugins-good |
-| gstreamer1.0-plugins-good:amd64 | gst-plugins-good |
-| winehq-stable:amd64 | wine-stable |
-| winehq-stable:i386 | wine |
-
 For all distro's see this [link](https://www.gloriouseggroll.tv/how-to-get-out-of-wine-dependency-hell/)
 
 ## Setup
