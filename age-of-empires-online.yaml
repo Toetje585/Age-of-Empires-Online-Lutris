@@ -3,7 +3,7 @@ game_slug: age-of-empires-online
 gogslug: ''
 humblestoreid: ''
 installer_slug: age-of-empires-online-celeste
-name: Age of Empires Online
+name: Age of Empires Online Dev
 notes: ''
 runner: wine
 script:
@@ -11,7 +11,7 @@ script:
   - age_of_empires_online_installer: https://www.mediafire.com/file/afo6kcizm5qhl4e/AOEO_Installer.zip
   - age_of_empires_celeste_launcher: https://github.com/ProjectCeleste/Celeste.Launcher/releases/latest/download/CelesteLauncher.zip
   game:
-    exe: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/Celeste Launcher.exe"
+    exe: "$GAMEDIR/drive_c/Program Files (x86)/Age Of Empires Online/Celeste Launcher.exe"
     prefix: $GAMEDIR
   installer:
   - input_menu:
@@ -29,25 +29,40 @@ script:
       name: create_prefix
       prefix: $GAMEDIR
   - task:
+      app: dotnet35sp1
+      description: "Installing .NET Framework. (3.5)"
+      name: winetricks
+      prefix: $GAMEDIR
+  - task:
       app: dotnet48
       description: "Installing .NET Framework. (4.8)"
       name: winetricks
       prefix: $GAMEDIR
+  - task:
+      app: corefonts mfc42 l3codecx msxml4 vcrun6 vcrun2005 vcrun2008 directplay
+      description: Installing all game requirements
+      name: winetricks
+      prefix: $GAMEDIR
+  - task:
+      app: d3dcompiler_43 d3dx9
+      description: Installing all DXVLK requirements
+      name: winetricks
+      prefix: $GAMEDIR
   - extract:
       file: age_of_empires_online_installer
-      dst: $GAMEDIR/setupdir/      
+      dst: $GAMEDIR/setupdir/
   - task:
       args: $GAMEDIR/setupdir/aoeo_setup.exe
       description: Run the Age of Empires Online Installer
       executable: $GAMEDIR/drive_c/windows/explorer.exe
       include_processes: explorer.exe
-      name: wineexec      
+      name: wineexec
   - task:
       name: winekill
       prefix: $GAMEDIR
   - extract:
       file: age_of_empires_celeste_launcher
-      dst: "$GAMEDIR/drive_c/Program Files/Age Of Empires Online/"      
+      dst: "$GAMEDIR/drive_c/Program Files (x86)/Age Of Empires Online/"      
   system:
     env:
       DXVK_HUD: devinfo,fps
