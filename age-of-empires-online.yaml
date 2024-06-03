@@ -3,7 +3,7 @@ game_slug: age-of-empires-online
 gogslug: ''
 humblestoreid: ''
 installer_slug: age-of-empires-online-celeste
-name: Age of Empires Online Dev
+name: Age of Empires Online
 notes: ''
 runner: wine
 script:
