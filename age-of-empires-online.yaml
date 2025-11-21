@@ -39,7 +39,7 @@ script:
       name: winetricks
       prefix: $GAMEDIR
   - task:
-      app: corefonts mfc42 l3codecx msxml4 vcrun6 vcrun2005 vcrun2008 directplay
+      app: corefonts mfc42 l3codecx msxml4 vcrun6 vcrun2022 directplay
       description: Installing all game requirements
       name: winetricks
       prefix: $GAMEDIR
