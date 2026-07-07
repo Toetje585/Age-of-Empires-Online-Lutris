@@ -96,6 +96,12 @@ Permanent co-op fix reported by [robertknexen](https://forums.projectceleste.com
 echo "net.ipv4.ip_unprivileged_port_start=1000" | sudo tee /etc/sysctl.d/99-aoeo-coop.conf
 ```
 
+If you don't want to reboot, apply it immediately with:
+
+```
+sudo sysctl -w net.ipv4.ip_unprivileged_port_start=1000
+```
+
 ## Updating the game
 
 Running a **Game Scan** in the launcher should do the job.
